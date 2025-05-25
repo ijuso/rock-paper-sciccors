@@ -1,3 +1,8 @@
+//globals
+humanScore = 0;
+computerScore = 0;
+
+
 function randomNum(min, max) {
     return Math.round(Math.random() * (max - min) + min); //funktio random numerolle ja round method pyöristämään numeron
 }
@@ -18,6 +23,18 @@ if (intNum === 1) {
 }
 }
 
+
+function getHumanChoice() {
+    choice = window.prompt("Choose either rock, paper or scissors");
+    //console.log(choice);
+    return choice;
+}
+
+function playRound(humanChoice, computerChoice) {
+    humanChoice = getHumanChoice().toLowerCase(); //tallentaa valuen gethumanchoice functiosta ja muuttaa sen lowercase
+    console.log(humanChoice);
+}
+
+playRound();
+
 window.onload = function what() {document.getElementById("main").innerHTML = getComputerChoice()}; //window.onload odotetaan DOM kokonaan lataamista jonka jälkeen suoritta function
-
-
